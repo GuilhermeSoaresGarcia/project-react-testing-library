@@ -27,15 +27,15 @@ describe('5. Teste o componente <Pokedex.js />', () => {
   });
 
   test('5d - se a Pokédex tem os botões de filtro', () => {
-    renderWithRouter(<App />);    
-    const allButton = screen.getByRole('button', { name: /all/i } );
+    renderWithRouter(<App />);
+    const allButton = screen.getByRole('button', { name: /all/i });
     const electricButton = screen.getByRole('button', { name: /electric/i });
     const fireButton = screen.getByRole('button', { name: /fire/i });
     const bugButton = screen.getByRole('button', { name: /bug/i });
     const poisonButton = screen.getByRole('button', { name: /poison/i });
     const psychicButton = screen.getByRole('button', { name: /psychic/i });
     const normalButton = screen.getByRole('button', { name: /normal/i });
-    const dragonButton = screen.getByRole('button', { name: /dragon/i });    
+    const dragonButton = screen.getByRole('button', { name: /dragon/i });
     expect(allButton).toBeInTheDocument();
     expect(electricButton).toBeInTheDocument();
     expect(fireButton).toBeInTheDocument();
