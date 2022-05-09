@@ -12,4 +12,8 @@
     "sourceType": "module"
   },
   "plugins": ["react"]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3fe81295e91e50ae0b3ab5fc200d9f9814d0c120
