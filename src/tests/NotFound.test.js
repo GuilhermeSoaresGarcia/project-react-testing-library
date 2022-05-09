@@ -7,14 +7,14 @@ describe('4. Teste o componente <NotFound.js />', () => {
     render(<NotFound />);
     const textNotFound = screen.getByRole('heading', {
       name: /page requested not found/i,
-    })
+    });
 
     expect(textNotFound).toBeInTheDocument();
   });
 
   test('4b - se a página mostra a imagem de pikachu chorando', () => {
     render(<NotFound />);
-    const imgNotFound = screen.getByRole('img', { name: /pikachu crying/i },)
+    const imgNotFound = screen.getByRole('img', { name: /pikachu crying/i, });
 
     expect(imgNotFound).toHaveAttribute('src', 'https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
   });
