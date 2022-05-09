@@ -6,17 +6,19 @@ describe('2. Teste o componente <About.js />', () => {
   test('2a - Teste se a página contém as informações sobre a Pokédex', () => {
     render(<About />);
     const aboutHeader = screen.getByRole('heading', { level: 2, name: /About Pokédex/i });
-    const aboutFirstParagraph = screen.getByText('This application simulates a Pokédex, a digital encyclopedia containing all Pokémons');
-    const aboutSecondParagraph = screen.getByText('One can filter Pokémons by type, and see more details for each one of them');
+    const aboutFirstParagraph = screen
+    .getByText('This application simulates a Pokédex, a digital encyclopedia containing all Pokémons');
+    const aboutSecondParagraph = screen
+    .getByText('One can filter Pokémons by type, and see more details for each one of them');
     const aboutImage = screen.getByRole('img', { name: 'Pokédex' });
     
     const paragraphLenght = [];
     
-    if (aboutFirstParagraph){
+    if (aboutFirstParagraph) {
       paragraphLenght.push(1);
     }
 
-    if (aboutSecondParagraph){
+    if (aboutSecondParagraph) {
       paragraphLenght.push(1);
     }
 
