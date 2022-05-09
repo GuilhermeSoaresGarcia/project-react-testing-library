@@ -20,14 +20,14 @@ describe('3. Teste o componente <FavoritePokemons.js />', () => {
     userEvent.click(linkMoreDetails);
 
     const pikaCheckbox = screen.getByRole('checkbox', {
-      name: /pokémon favoritado\?/i
+      name: /pokémon favoritado\?/i,
     });
 
     userEvent.click(pikaCheckbox);
 
     history.push('/favorites');
 
-    const pika = screen.getByText(/pikachu/i)
+    const pika = screen.getByText(/pikachu/i);
 
     expect(pika).toBeInTheDocument();
   });
