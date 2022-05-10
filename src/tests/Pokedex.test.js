@@ -18,6 +18,22 @@ describe('5. Teste o componente <Pokedex.js />', () => {
     const nextPokeButton = screen.getByRole('button', { name: /próximo pokémon/i });
     userEvent.click(nextPokeButton);
     expect(pikachu.textContent).toBe('Charmander');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Caterpie');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Ekans');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Alakazam');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Mew');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Rapidash');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Snorlax');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Dragonair');
+    userEvent.click(nextPokeButton);
+    expect(pikachu.textContent).toBe('Pikachu');
   });
 
   test('5c - se é mostrado apenas um pokémon por vez', () => {
@@ -28,21 +44,24 @@ describe('5. Teste o componente <Pokedex.js />', () => {
 
   test('5d - se a Pokédex tem os botões de filtro', () => {
     renderWithRouter(<App />);
-    const allButton = screen.getByRole('button', { name: /all/i });
-    const electricButton = screen.getByRole('button', { name: /electric/i });
-    const fireButton = screen.getByRole('button', { name: /fire/i });
-    const bugButton = screen.getByRole('button', { name: /bug/i });
-    const poisonButton = screen.getByRole('button', { name: /poison/i });
-    const psychicButton = screen.getByRole('button', { name: /psychic/i });
-    const normalButton = screen.getByRole('button', { name: /normal/i });
-    const dragonButton = screen.getByRole('button', { name: /dragon/i });
-    expect(allButton).toBeInTheDocument();
-    expect(electricButton).toBeInTheDocument();
-    expect(fireButton).toBeInTheDocument();
-    expect(bugButton).toBeInTheDocument();
-    expect(poisonButton).toBeInTheDocument();
-    expect(psychicButton).toBeInTheDocument();
-    expect(normalButton).toBeInTheDocument();
-    expect(dragonButton).toBeInTheDocument();
+    const elements = [
+      'All',
+      'Electric',
+      'Fire',
+      'Bug',
+      'Poison',
+      'Psychic',
+      'Normal',
+      'Dragon',
+    ];
+
+    const countAllButtons = screen.getAllByTestId('pokemon-type-button');
+    const condition = 7;
+
+    elements.forEach((element) => {
+      const buttons = screen.getByRole('button', { name: element });
+      expect(buttons).toBeInTheDocument();
+    });
+    expect(countAllButtons).toHaveLength(condition);
   });
 });
