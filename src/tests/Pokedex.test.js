@@ -64,4 +64,13 @@ describe('5. Teste o componente <Pokedex.js />', () => {
     });
     expect(countAllButtons).toHaveLength(condition);
   });
+
+  test('5e - se a Pokédex contém um botão para resetar o filtro', () => {
+    renderWithRouter(<App />);
+    const allButton = screen.getByRole('button', { name: /all/i });
+    expect(allButton).toBeInTheDocument();
+    userEvent.click(allButton);
+    const pikachu = screen.getByText(/pikachu/i);
+    expect(pikachu).toBeInTheDocument();
+  });
 });
