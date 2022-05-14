@@ -22,6 +22,7 @@ describe('7. Teste o componente <PokemonDetails.js />', () => {
     expect(pikachuDetailsTitle).toBeInTheDocument();
     expect(pikachuDescription).toBeInTheDocument();
   });
+
   test('7b - se existe na página uma seção com os mapas contendo as localizações', () => {
     const { history } = renderWithRouter(<App />);
     history.push(pikachuURL);

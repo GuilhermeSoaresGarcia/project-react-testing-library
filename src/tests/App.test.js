@@ -10,7 +10,6 @@ describe('1. Teste o componente <App.js />', () => {
     const homeLink = screen.getByRole('link', { name: /home/i });
     const aboutLink = screen.getByRole('link', { name: /about/i });
     const favoritesLink = screen.getByRole('link', { name: /favorite pok/i });
-
     expect(homeLink).toBeInTheDocument();
     expect(aboutLink).toBeInTheDocument();
     expect(favoritesLink).toBeInTheDocument();
@@ -19,27 +18,21 @@ describe('1. Teste o componente <App.js />', () => {
   test('1b - URL / ao clicar no link Home da barra de navegação', () => {
     const { history } = renderWithRouter(<App />);
     const homeLink = screen.getByRole('link', { name: /home/i });
-
     userEvent.click(homeLink);
-
     expect(history.location.pathname).toBe('/');
   });
 
   test('1c - URL /about, ao clicar no link About da barra de navegação', () => {
     const { history } = renderWithRouter(<App />);
     const homeLink = screen.getByRole('link', { name: /about/i });
-
     userEvent.click(homeLink);
-
     expect(history.location.pathname).toBe('/about');
   });
 
   test('1d - URL /favorites, ao clicar no link da barra de navegação', () => {
     const { history } = renderWithRouter(<App />);
     const homeLink = screen.getByRole('link', { name: /favorite pok/i });
-
     userEvent.click(homeLink);
-
     expect(history.location.pathname).toBe('/favorites');
   });
 
@@ -48,7 +41,6 @@ describe('1. Teste o componente <App.js />', () => {
     history.push('/wtfrudoinhere');
     const pageTitle = screen
       .getByRole('heading', { level: 2, name: /Page requested not found/i });
-
     expect(pageTitle).toBeInTheDocument();
     expect(history.location.pathname).toBe('/wtfrudoinhere');
   });

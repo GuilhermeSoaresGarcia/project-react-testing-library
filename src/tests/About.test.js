@@ -15,11 +15,9 @@ describe('2. Teste o componente <About.js />', () => {
     if (aboutFirstParagraph) {
       paragraphLenght.push(1);
     }
-
     if (aboutSecondParagraph) {
       paragraphLenght.push(1);
     }
-
     expect(aboutHeader).toBeInTheDocument();
     expect(aboutFirstParagraph).toBeInTheDocument();
     expect(aboutSecondParagraph).toBeInTheDocument();
