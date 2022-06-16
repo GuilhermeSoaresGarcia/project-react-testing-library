@@ -1,16 +1,35 @@
-# 🚧 README em construção 🚧
+# React Testing Library Project
 
-<!-- Olá, Tryber!
+# Contexto
+Este projeto propunha a utilização dos seletores (queries) da React-Testing-Library em testes automatizados.
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+>Simular eventos com a React-Testing-Library em testes automatizados;
 
-É essencial que você preencha esse documento por conta própria, ok?
+>Teste de fluxos lógicos assíncronos com RTL;
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+>Criação de mocks de APIs utilizando fetch;
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+>Testar inputs de formulários.
 
--->
+## Técnologias usadas
+
+Front-end:
+> Desenvolvido usando: biblioteca de testes do React - RTL;
+
+> Os testes deveriam verificar a funcionalidade de uma aplicação desenvolvida em estudos da Trybe - uma "Pokédex".
+
+## Instalando Dependências
+```
+npm install
+``` 
+## Executando aplicação
+```
+npm start
+```
+## Executando Testes
+
+* Para rodar todos os testes:
+
+  ```
+    npm test
+  ```
